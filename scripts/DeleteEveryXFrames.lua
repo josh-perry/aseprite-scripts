@@ -11,14 +11,14 @@ dlg:show()
 local data = dlg.data
 
 if data.ok then
-	app.command.GoToFirstFrame()
-	app.command.GoToNextFrame()
+  app.command.GoToFirstFrame()
+  app.command.GoToNextFrame()
 
-	for i = 1, #app.activeSprite.frames do
-		if i % data.frames == 0 then
-			app.command.RemoveFrame()	
-		else
-			app.command.GotoNextFrame()
-		end
-	end
+  for i = 1, #app.activeSprite.frames do
+    if i % data.frames == 0 then
+      app.command.RemoveFrame()
+    else
+      app.command.GotoNextFrame()
+    end
+  end
 end
